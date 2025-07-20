@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     // Función para mostrar/ocultar la información de prevención
     $('.btn-info').click(function() {
@@ -79,7 +80,7 @@ $(document).ready(function() {
             result = '¡Alerta! Podrías ser víctima de un ataque. Mejora tu seguridad.';
         }
 
-        // Mostrar el resultado
+        // Muestra el resultado
         $('#test-result').text(result).show();
     });
 });
