@@ -1,11 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amenazas Comunes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
-    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Ciberseguridad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html">Amenazas Comunes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index3.html">Consejos de Seguridad</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel para Amenazas Comunes -->
+    <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Phishing -->
+            <div class="carousel-item active">
+                <img src="img/ciberseguridad2.jpg" class="d-block w-100" alt="Ciberseguridad">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Phishing</h2>
+                    <p>Phishing es una técnica de ciberataque en la que los delincuentes intentan engañar a las personas 
+                        para que revelen información confidencial, como contraseñas, números de tarjetas de crédito o datos 
+                        bancarios. Este tipo de ataque generalmente se lleva a cabo mediante correos electrónicos 
+                        fraudulentos, mensajes de texto o sitios web falsos que imitan a entidades legítimas, como bancos o 
+                        empresas. Los atacantes suelen utilizar mensajes que parecen oficiales para generar urgencia o 
+                        confianza en la víctima, como notificaciones de "problemas con tu cuenta" o "actualización de 
+                        seguridad necesaria". El objetivo es que el usuario caiga en la trampa y proporcione su información 
+                        personal, que luego puede ser utilizada para cometer fraudes o robo de identidad.</p>
+                    
+                    <button class="btn btn-info" onclick="toggleInfo('phishingInfo', this)">Mostrar formas de prevenir</button>
+                    
+                    <div id="phishingInfo" class="prevention-info">
+                        <ul>
+                            <li>No compartas tus contraseñas por correo o mensajes.</li>
+                            <li>Verifica siempre la dirección web del sitio.</li>
+                            <li>Desconfía de los mensajes de urgencia o amenazas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ransomware -->
+            <div class="carousel-item">
+                <img src="img/ciberseguridad2.jpg" class="d-block w-100" alt="Ciberseguridad">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Ransomware</h2>
+                    <p>Ransomware es un tipo de software malicioso diseñado para bloquear o cifrar los archivos de una 
+                        víctima y exigir un rescate, generalmente en criptomonedas, a cambio de liberarlos. Una vez que el 
+                        dispositivo está infectado, el ransomware suele mostrar un mensaje en pantalla informando que los 
+                        archivos han sido cifrados y que el acceso será restaurado únicamente si se paga una determinada 
+                        cantidad. Este tipo de ataque puede afectar tanto a usuarios individuales como a grandes 
+                        organizaciones, y a menudo es distribuido a través de correos electrónicos fraudulentos, enlaces 
+                        maliciosos o vulnerabilidades en el software. Los ataques de ransomware pueden causar daños 
+                        significativos, tanto financieros como operativos, y en algunos casos, incluso si el rescate se 
+                        paga, no hay garantía de que los archivos sean recuperados.</p>
+                    
+                    <button class="btn btn-info" onclick="toggleInfo('ransomwareInfo', this)">Mostrar formas de prevenir</button>
+                    
+                    <div id="ransomwareInfo" class="prevention-info">
+                        <ul>
+                            <li>No abras archivos adjuntos de correos sospechosos.</li>
+                            <li>Haz copias de seguridad de tus archivos importantes.</li>
+                            <li>Mantén tu software y sistema operativo actualizados.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Malware -->
+            <div class="carousel-item">
+                <img src="img/ciberseguridad2.jpg" class="d-block w-100" alt="Ciberseguridad">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Malware</h2>
+                    <p>Malware es un término general utilizado para describir cualquier tipo de software malicioso diseñado 
+                        para dañar, robar información o comprometer la funcionalidad de un dispositivo o sistema informático. 
+                        Los tipos más comunes de malware incluyen virus, troyanos, spyware, adware y gusanos. Estos programas 
+                        maliciosos pueden infiltrarse en un dispositivo a través de correos electrónicos fraudulentos, 
+                        descargas de software infectado o vulnerabilidades de seguridad. Una vez instalado, el malware puede 
+                        realizar diversas acciones, como robar datos personales, espiar la actividad del usuario, dañar 
+                        archivos importantes o incluso permitir el control remoto del dispositivo por parte de un atacante. 
+                        La protección contra malware es esencial para mantener la seguridad y privacidad en el entorno digital.</p>
+                    
+                    <button class="btn btn-info" onclick="toggleInfo('malwareInfo', this)">Mostrar formas de prevenir</button>
+                    
+                    <div id="malwareInfo" class="prevention-info">
+                        <ul>
+                            <li>No descargues software de fuentes no confiables.</li>
+                            <li>Utiliza un software antivirus actualizado.</li>
+                            <li>No hagas clic en enlaces sospechosos o anuncios emergentes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ataques DDoS -->
+            <div class="carousel-item">
+                <img src="img/ciberseguridad2.jpg" class="d-block w-100" alt="Ciberseguridad">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Ataques DDoS</h2>
+                    <p>Ataques DDoS (Distributed Denial of Service) son un tipo de ciberataque en el que múltiples sistemas 
+                        comprometidos, conocidos como "bots", envían una cantidad abrumadora de tráfico a un servidor, red o 
+                        sitio web con el fin de agotar sus recursos y hacerlo inaccesible para los usuarios legítimos. Estos 
+                        ataques pueden hacer que los servicios en línea caigan o se vuelvan extremadamente lentos, 
+                        interrumpiendo operaciones comerciales o provocando pérdidas económicas. Los atacantes utilizan redes 
+                        de computadoras infectadas (botnets) para llevar a cabo el ataque, lo que dificulta la identificación 
+                        de los responsables. Los ataques DDoS son cada vez más comunes en entornos empresariales y 
+                        gubernamentales, y pueden tener efectos devastadores, especialmente si no se cuenta con medidas de 
+                        mitigación adecuadas, como firewalls o servicios de protección específicos.</p>
+                    
+                    <button class="btn btn-info" onclick="toggleInfo('ddosInfo', this)">Mostrar formas de prevenir</button>
+                    
+                    <div id="ddosInfo" class="prevention-info">
+                        <ul>
+                            <li>Implementa protección DDoS en tus servidores y redes.</li>
+                            <li>Configura firewalls para filtrar tráfico malicioso.</li>
+                            <li>Usa servicios de mitigación de DDoS disponibles en la nube.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Flechas carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white mt-6">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <p>&copy; 2025 Todos los derechos reservados.</p>
+                <p>
+                    <a href="https://github.com/Yosselinne" target="_blank" class="text-white">GitHub</a> | 
+                    <a href="https://learning-pro.skillnest.com/login/index.php" target="_blank" class="text-white">Skillnest</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 </html>
